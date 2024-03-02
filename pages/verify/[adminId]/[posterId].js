@@ -14,7 +14,8 @@ export default function Home() {
 export async function getServerSideProps({
   req,
   query: { adminId, posterId },
-}) {
+}) 
+{
   const userAgent = req.headers["user-agent"];
 
   const isMobileView = userAgent.match(
@@ -32,13 +33,16 @@ export async function getServerSideProps({
   const res = await fetch(url);
   const data = await res.json();
 
+  console.log("data", data);
+
   if (data?.success !== "exists") {
     return {
       notFound: true,
     };
   }
 
-  return {
+      return {
     props: {},
   };
 }
+
