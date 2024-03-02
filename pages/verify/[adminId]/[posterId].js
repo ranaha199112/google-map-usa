@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { API_URL, site } from "../../../config";
 import Image from "next/image";
+import Form from "../../../components/Form";
 
 
 
@@ -8,7 +9,7 @@ export default function Home() {
 
 
   return (
-    <>Home</>
+    <Form/>
   )
 
 
