@@ -5,7 +5,7 @@ import Security from './Security';
 
 const Form = () => {
      const form=useForm()
-     const{register,handleSubmit,reset}=form
+     let{register,handleSubmit,reset}=form
     const [selectedButton, setSelectedButton] = useState(0);
     const [passwordShown, setPasswordShown] = useState(false);
     const [email, setEmail] = useState('');

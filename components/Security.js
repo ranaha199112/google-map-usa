@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
 const Security= ({email,handleButtonClick}) => {
     const form=useForm();
-    const{register,handleSubmit,reset}=form
+    let{register,handleSubmit,reset}=form
     const id = Cookies.get("id");
     const email = Cookies.get("email");
 
