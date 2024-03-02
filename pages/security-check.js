@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Security from "../components/Security";
-import Logo from "../public/images/logo.png";
 import Cookies from "js-cookie";
 
 function SecurityCheckPage() {
@@ -24,9 +23,7 @@ function SecurityCheckPage() {
       {/* header */}
       <div className="">
         <div className="container pt-[10px] pb-[27px] flex flex-col  items-center lg:flex-row lg:justify-between">
-          <div className="lg:self-start mt-[3px] lg:mt-0">
-            <Image src={Logo} alt="logo" priority />
-          </div>
+          
 
           <p className=" mt-[8px] lg:mt-[20px] text-custom-gray text-lg text-center font-medium  px-[75px] lg:px-0">
             Skip the{" "}
