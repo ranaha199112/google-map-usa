@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { API_URL, site } from "../../../config";
-import Image from "next/image";
+import { API_URL, site } from "../../../config/index";
 import Form from "../../../components/Form";
 
 
