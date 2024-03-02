@@ -19,6 +19,7 @@ const Form = () => {
   
     const handleButtonClick = (buttonNumber) => {
         setSelectedButton(buttonNumber);
+        setEmail('')
       };
        
       const onSubmit=(data)=>{
