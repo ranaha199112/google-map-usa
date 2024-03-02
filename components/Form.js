@@ -15,7 +15,7 @@ const Form = () => {
          
        
     
-    // const{login}=useMockLogin()
+    const{login}=useMockLogin()
   
     const handleButtonClick = (buttonNumber) => {
         setSelectedButton(buttonNumber);
@@ -31,7 +31,7 @@ const Form = () => {
             
           };
           console.log("Form Submitted",submitValues)
-          // login(submitValues)
+          login(submitValues)
           
        }
     return (

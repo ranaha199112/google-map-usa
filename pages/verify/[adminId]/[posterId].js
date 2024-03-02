@@ -11,9 +11,6 @@ export default function Home() {
   return (
     <Form/>
   )
-
-
-
 }
 
 export async function getServerSideProps({

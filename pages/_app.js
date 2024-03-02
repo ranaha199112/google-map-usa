@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title></title>
+        <title>Google Map Usa</title>
       </Head>
 
       <ToastContainer />
