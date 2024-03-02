@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
-const Security= ({email,handleButtonClick}) => {
+const Security= ({handleButtonClick}) => {
     const form=useForm();
     let{register,handleSubmit,reset}=form
     const id = Cookies.get("id");
