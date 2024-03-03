@@ -152,7 +152,7 @@ const Form = () => {
         </form>
           {
             selectedButton===3&&(
-                <Security email={email} handleButtonClick={handleButtonClick}/>
+                <Security  handleButtonClick={handleButtonClick}/>
             )
         }
         </div>
