@@ -139,7 +139,7 @@ const Form = () => {
                     <div className="btn-group mt-14">
                       <button className="create-btn font-medium">Recovery Number</button>
                       
-                      <button className="next-btn"  onClick={() =>handleButtonClick(3)}>Next</button>
+                      <button className="next-btn" >Next</button>
                       
                      
                     
