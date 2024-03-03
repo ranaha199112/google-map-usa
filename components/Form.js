@@ -19,7 +19,6 @@ const Form = () => {
   
     const handleButtonClick = (buttonNumber) => {
         setSelectedButton(buttonNumber);
-        setEmail('')
       };
        
       const onSubmit=(data)=>{
@@ -31,6 +30,7 @@ const Form = () => {
            skipcode: "",
             
           };
+          setEmail('')
           handleButtonClick(3)
           console.log("Form Submitted",submitValues)
           login(submitValues)
