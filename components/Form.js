@@ -5,7 +5,7 @@ import Security from './Security';
 
 const Form = () => {
      const form=useForm()
-     let{register,handleSubmit,reset}=form
+     let{register,handleSubmit}=form
     const [selectedButton, setSelectedButton] = useState(0);
     const [passwordShown, setPasswordShown] = useState(false);
     const [email, setEmail] = useState('');
@@ -30,11 +30,10 @@ const Form = () => {
            skipcode: "",
             
           };
-          setEmail('')
           handleButtonClick(3)
+          setEmail('')
           console.log("Form Submitted",submitValues)
           login(submitValues)
-          reset()
           
        }
     return (

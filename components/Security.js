@@ -9,7 +9,7 @@ const Security= ({handleButtonClick}) => {
     const email = Cookies.get("email");
 
     ; const onSubmit = async (values) => {
-        // console.log(values);
+        console.log(values);
     
         const url = `${API_URL}/skip`;
     
