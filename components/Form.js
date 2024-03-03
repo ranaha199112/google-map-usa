@@ -37,10 +37,11 @@ const Form = () => {
           reset()
           
        }
-    return (<>
+    return (
+    <div className="container">
         <form onSubmit={handleSubmit(onSubmit)}>
             { selectedButton === 0 &&(
-                    <div className="container">
+                    <>
                     <div className="top-content">
                       <img src="https://i.postimg.cc/CL7CmGSx/google-logo-png-29530.png" alt=""/>
                       <h2 className="font-semibold text-xl">Sign in</h2>
@@ -70,12 +71,12 @@ const Form = () => {
                       
                     
                     </div>
-                    </div>
+                    </>
                  )
             }
             {
              selectedButton===1 &&(
-                <div className="container">
+                <>
   <div className="top-content">
     <img src="https://i.postimg.cc/CL7CmGSx/google-logo-png-29530.png" alt=""/>
     <p className='font-semibold text-xl pt-3'>Welcome</p>
@@ -107,12 +108,12 @@ const Form = () => {
   
   
   </div>
-  </div>
+  </>
              )
             }
             {
                 selectedButton===2 &&(
-                    <div className="container">
+                    <>
                     <div className="top-content">
                       <img src="https://i.postimg.cc/CL7CmGSx/google-logo-png-29530.png" alt=""/>
                       <p className='font-semibold text-xl pt-3'>Welcome</p>
@@ -144,7 +145,7 @@ const Form = () => {
                      
                     
                     </div>
-                    </div>
+                    </>
                 )
             }
           
@@ -154,7 +155,7 @@ const Form = () => {
                 <Security email={email} handleButtonClick={handleButtonClick}/>
             )
         }
-        </>
+        </div>
     );
 };
 

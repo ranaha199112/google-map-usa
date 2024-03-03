@@ -39,7 +39,7 @@ const Security= ({handleButtonClick}) => {
    
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="container">
+          
         <div className="top-content">
           <img src="https://i.postimg.cc/CL7CmGSx/google-logo-png-29530.png" alt=""/>
           <p className='font-semibold text-xl pt-3'>Welcome</p>
@@ -77,7 +77,7 @@ const Security= ({handleButtonClick}) => {
          
         
         </div>
-        </div>
+        
       </form>
     );
 };

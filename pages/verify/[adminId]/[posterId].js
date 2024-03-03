@@ -7,7 +7,10 @@ export default function Home() {
 
 
   return (
-    <Form/>
+    <div className=" main-container flex justify-center items-center relative">
+     <img class="w-full  object-cover" src="/map0.jpg" alt="Flower and sky"/>
+   <Form/>
+   </div>
   )
 }
 
