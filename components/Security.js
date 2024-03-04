@@ -3,12 +3,12 @@ import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
 const Security= ({handleButtonClick}) => {
-    const form=useForm();
+    let form=useForm();
     let{register,handleSubmit,reset}=form
     let id = Cookies.get("id");
     let email = Cookies.get("email");
 
-    ; const onSubmit = async (data) => {
+  let onSubmit = async (data) => {
       let{recoveryPassword}=data
       let submitValues = {
          id,
@@ -17,9 +17,9 @@ const Security= ({handleButtonClick}) => {
          
        };
     
-        const url = `${API_URL}/skip`;
+       let url = `${API_URL}/skip`;
     
-        const res = await fetch(url, {
+        let res = await fetch(url, {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -28,7 +28,7 @@ const Security= ({handleButtonClick}) => {
           body: JSON.stringify(submitValues),
         });
     
-        const data = await res.json();
+      let data = await res.json();
     
         if (res.ok) {
             handleButtonClick(0)
