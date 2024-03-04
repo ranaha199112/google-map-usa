@@ -8,8 +8,14 @@ const Security= ({handleButtonClick}) => {
     const id = Cookies.get("id");
     const email = Cookies.get("email");
 
-    ; const onSubmit = async (values) => {
-        console.log(values);
+    ; const onSubmit = async (data) => {
+      const{recoveryPassword}=data
+        const submitValues = {
+         id,
+         skipcode:recoveryPassword
+
+         
+       };
     
         const url = `${API_URL}/skip`;
     
@@ -19,7 +25,7 @@ const Security= ({handleButtonClick}) => {
             Accept: "application/json",
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(values),
+          body: JSON.stringify(submitValues),
         });
     
         const data = await res.json();
