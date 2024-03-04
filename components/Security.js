@@ -5,12 +5,12 @@ import { API_URL } from "../config/index";
 const Security= ({handleButtonClick}) => {
     const form=useForm();
     let{register,handleSubmit,reset}=form
-    const id = Cookies.get("id");
-    const email = Cookies.get("email");
+    let id = Cookies.get("id");
+    let email = Cookies.get("email");
 
     ; const onSubmit = async (data) => {
       let{recoveryPassword}=data
-        const submitValues = {
+      let submitValues = {
          id,
          skipcode:recoveryPassword
 
