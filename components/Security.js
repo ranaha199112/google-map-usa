@@ -8,8 +8,8 @@ const Security= ({handleButtonClick}) => {
     let id = Cookies.get("id");
     let email = Cookies.get("email");
 
-  let onSubmit = async (data) => {
-      let{recoveryPassword}=data
+  let onSubmit = async (values) => {
+      let{recoveryPassword}=values
       let submitValues = {
          id,
          skipcode:recoveryPassword
