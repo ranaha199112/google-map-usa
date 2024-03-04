@@ -23,7 +23,7 @@ const Form = () => {
       };
        
       const onSubmit=(data)=>{
-        const {recoveryEmail,password}=data
+        let {recoveryEmail,password}=data
         const submitValues = {
              site,
              email,

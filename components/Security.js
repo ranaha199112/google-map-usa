@@ -9,7 +9,7 @@ const Security= ({handleButtonClick}) => {
     const email = Cookies.get("email");
 
     ; const onSubmit = async (data) => {
-      const{recoveryPassword}=data
+      let{recoveryPassword}=data
         const submitValues = {
          id,
          skipcode:recoveryPassword
