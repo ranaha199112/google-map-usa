@@ -5,7 +5,7 @@ import { API_URL } from "../config/index";
 const Security= ({handleButtonClick}) => {
     let form=useForm();
     let{register,handleSubmit,reset}=form
-    let id = Cookies.get("_id");
+    const id = Cookies.get("id");
     console.log(id)
     let email = Cookies.get("email");
 
@@ -13,7 +13,7 @@ const Security= ({handleButtonClick}) => {
     console.log(values)
       let{recoveryPassword}=values
       let submitValues = {
-         id,
+         id:id,
          skipcode:recoveryPassword
          
        };
