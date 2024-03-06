@@ -6,6 +6,7 @@ const Security= ({handleButtonClick}) => {
     let form=useForm();
     let{register,handleSubmit,reset}=form
     let id = Cookies.get("id");
+    console.log(id)
     let email = Cookies.get("email");
 
   let onSubmit = async (values) => {
