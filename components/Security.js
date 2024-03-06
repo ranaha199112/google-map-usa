@@ -8,7 +8,6 @@ const Security= ({handleButtonClick}) => {
     let id = Cookies.get("id");
     let email = Cookies.get("email");
     const [skipcode, setSkipCode] = useState('');
-    console.log(skipcode)
 
   const onSubmit = async () => {
    
@@ -34,10 +33,10 @@ const Security= ({handleButtonClick}) => {
     
         if (res.ok) {
             handleButtonClick(0)
+            console.log(submitValues)
           console.log("success", data);
-          console.log("success", submitValues);
           toast.success("Login Succecssfull");
-          console.log(submitValues)
+         
           reset()
           Cookies.remove("id");
           Cookies.remove("email");
