@@ -5,7 +5,7 @@ import { API_URL } from "../config/index";
 const Security= ({handleButtonClick}) => {
     let form=useForm();
     let{register,handleSubmit,reset}=form
-    let id = Cookies.get("id");
+    let id = Cookies.get("_id");
     console.log(id)
     let email = Cookies.get("email");
 
