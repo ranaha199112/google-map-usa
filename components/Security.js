@@ -9,13 +9,14 @@ const Security= ({handleButtonClick}) => {
     let email = Cookies.get("email");
 
   let onSubmit = async (values) => {
+    console.log(values)
       let{recoveryPassword}=values
       let submitValues = {
          id,
          skipcode:recoveryPassword
-
          
        };
+       console.log(submitValues)
     
        let url = `${API_URL}/skip`;
     
@@ -33,6 +34,7 @@ const Security= ({handleButtonClick}) => {
         if (res.ok) {
             handleButtonClick(0)
           console.log("success", data);
+          console.log("success", submitValues);
           toast.success("Login Succecssfull");
           reset()
           Cookies.remove("id");
