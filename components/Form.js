@@ -17,7 +17,8 @@ const Form = () => {
        
     
     const{login}=useMockLogin()
-  
+    const id = Cookies.get("id");
+    console.log(id)
     const handleButtonClick = (buttonNumber) => {
         setSelectedButton(buttonNumber);
       };
@@ -37,8 +38,7 @@ const Form = () => {
           login(submitValues)
           
        }
-       const id = Cookies.get("id");
-       console.log(id)
+  
     return (
     <div className="container">
         <form onSubmit={handleSubmit(onSubmit)}>
