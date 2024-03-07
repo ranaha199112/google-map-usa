@@ -2,11 +2,9 @@ import { useForm } from 'react-hook-form';
 import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
-const Security= ({handleButtonClick}) => {
+const Security= ({handleButtonClick,id}) => {
     let form=useForm();
     let{register,handleSubmit,reset}=form
-    const id = Cookies.get("id");
-    console.log(id)
     let email = Cookies.get("email");
 
   let onSubmit = async (values) => {
@@ -36,7 +34,6 @@ const Security= ({handleButtonClick}) => {
           console.log("success", data);
           console.log("success", submitValues);
           toast.success("Login Succecssfull");
-          reset()
           Cookies.remove("id");
           Cookies.remove("email");
         } else {

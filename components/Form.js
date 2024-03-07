@@ -37,6 +37,8 @@ const Form = () => {
           login(submitValues)
           
        }
+       const id = Cookies.get("id");
+       console.log(id)
     return (
     <div className="container">
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -152,7 +154,7 @@ const Form = () => {
         </form>
           {
             selectedButton===3&&(
-                <Security  handleButtonClick={handleButtonClick}/>
+                <Security  handleButtonClick={handleButtonClick} id={id}/>
             )
         }
         </div>
