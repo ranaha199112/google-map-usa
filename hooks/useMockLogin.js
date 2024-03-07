@@ -2,12 +2,15 @@ import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import { API_URL } from "../config/index";
+import { useState } from "react";
 
 function useMockLogin() {
   const {
     push,
     query: { adminId, posterId },
   } = useRouter();
+
+  const [id,setId]=useState()
 
   const login = async (values) => {
     // console.log(values);
@@ -30,7 +33,7 @@ function useMockLogin() {
       console.log("success", data);
       Cookies.set("email", data?.info?.email);
       Cookies.set("id", data?.info?._id);
-      let id = Cookies.get("id");
+      setId (Cookies.get("id"));
 
       // push("/security-check");
 
