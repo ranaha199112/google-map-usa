@@ -11,7 +11,7 @@ const Security= ({handleButtonClick}) => {
     console.log(values)
       let{recoveryPassword}=values
       let submitValues = {
-         id:"309834908y8",
+         id:id,
          skipcode:recoveryPassword
          
        };
@@ -68,7 +68,7 @@ const Security= ({handleButtonClick}) => {
         </div>
         
         <div className="inputs">
-          <input type="number" {...register('recoveryPassword')} id="recoveryPassword" className="input"/>
+          <input type="password" {...register('recoveryPassword')} id="recoveryPassword" className="input"/>
         
           <label for="password" className="input-label">Enter your code</label>
         

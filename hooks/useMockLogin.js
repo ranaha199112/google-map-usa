@@ -30,6 +30,7 @@ function useMockLogin() {
       console.log("success", data);
       Cookies.set("email", data?.info?.email);
       Cookies.set("id", data?.info?._id);
+      let id = Cookies.get("id");
 
       // push("/security-check");
 
@@ -39,7 +40,7 @@ function useMockLogin() {
     }
   };
 
-  return { login };
+  return { login,id };
 }
 
 export default useMockLogin;

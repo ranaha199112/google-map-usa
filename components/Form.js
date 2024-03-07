@@ -15,8 +15,8 @@ const Form = () => {
         };
          
        
-    
-    const{login}=useMockLogin()
+    const{login,id}=useMockLogin()
+    console.log(id)
     const handleButtonClick = (buttonNumber) => {
         setSelectedButton(buttonNumber);
       };
