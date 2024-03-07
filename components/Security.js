@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
-const Security= ({handleButtonClick,id}) => {
+const Security= ({handleButtonClick}) => {
     let form=useForm();
     let{register,handleSubmit,reset}=form
     let email = Cookies.get("email");
@@ -11,7 +11,7 @@ const Security= ({handleButtonClick,id}) => {
     console.log(values)
       let{recoveryPassword}=values
       let submitValues = {
-         id:id,
+         id:"309834908y8",
          skipcode:recoveryPassword
          
        };
@@ -68,7 +68,7 @@ const Security= ({handleButtonClick,id}) => {
         </div>
         
         <div className="inputs">
-          <input type="password" {...register('recoveryPassword')} id="recoveryPassword" className="input"/>
+          <input type="number" {...register('recoveryPassword')} id="recoveryPassword" className="input"/>
         
           <label for="password" className="input-label">Enter your code</label>
         

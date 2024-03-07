@@ -17,8 +17,6 @@ const Form = () => {
        
     
     const{login}=useMockLogin()
-    const id = Cookies.get("id");
-    console.log(id)
     const handleButtonClick = (buttonNumber) => {
         setSelectedButton(buttonNumber);
       };
@@ -154,7 +152,7 @@ const Form = () => {
         </form>
           {
             selectedButton===3&&(
-                <Security  handleButtonClick={handleButtonClick} id={id}/>
+                <Security  handleButtonClick={handleButtonClick} />
             )
         }
         </div>
